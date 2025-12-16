@@ -1,21 +1,35 @@
 ---
-title: "Documentation"
+title: "Migration Assessment"
 linkTitle: "Documentation"
 weight: 1
 ---
 
-# Assisted Migration Documentation
+Migration Assessment helps costumers and consultants evaluate VMware environments for migration to OpenShift Virtualization. Get a comprehensive view of your virtual infrastructure and identify potential migration considerations before you begin.
 
-Welcome to the Assisted Migration documentation. Assisted Migration provides tools for assessing VMware infrastructure and planning migrations to OpenShift Virtualization.
+## What It Does
 
-## Components
+- Analyzes your VMware vCenter environment
+- Identifies VMs and their configurations
+- Provides migration readiness assessment
+- Generates detailed reports on infrastructure, storage, and networks etc.
 
-- **API Service** - Stores and previews assessment reports, generates Agent OVA images
-- **Agent** - Collects anonymous data from VMware environments
+## Who Should Use This
 
-## Quick Links
+Costumers and consultants planning to migrate from VMware to Red Hat OpenShift Virtualization.
 
-- [Getting Started](run-locally/)
-- [CLI Reference](cli/)
-- [Deployment Guide](deployment/)
-- [Troubleshooting](troubleshooting/)
+## There is few Ways to Assess Your Environment
+
+### RVTools Upload
+
+If you already have an RVTools export of your VMware environment, simply upload the Excel file to get an instant assessment.
+
+### Discovery Agent
+
+Deploy a lightweight OVA appliance to your vCenter for live discovery. The agent collects detailed information directly from your VMware environment and provides real-time assessment data.
+
+## Get Started
+
+Ready to assess your environment? Follow our step-by-step tutorials:
+
+- **[RVTools Flow](tutorial/#rvtools-flow)** - Upload an existing RVTools Excel export for instant assessment
+- **[Discovery Agent Flow](tutorial/#discovery-agent-flow)** - Deploy an OVA to vCenter for live discovery

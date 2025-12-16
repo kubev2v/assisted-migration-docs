@@ -1,5 +1,6 @@
 // Documentation page styles
 
-.td-doc {
-  // Add documentation-specific styles here
+// Bold main section links in Table of Contents sidebar
+.td-toc nav > ul > li > a {
+  font-weight: bold;
 }
