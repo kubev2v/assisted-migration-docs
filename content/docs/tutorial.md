@@ -21,6 +21,45 @@ Upload an existing RVTools export file for instant assessment. Watch the video t
 
 <iframe width="700px" height="400px" src="https://embed.app.guidde.com/playbooks/2o11fzpTRbEM2uDjauyBCi" title="Assisted Migration Using RVtools Flow" frameborder="0" referrerpolicy="unsafe-url" allowfullscreen="true" style="border-radius: 10px"></iframe>
 
+### Prerequisites: RVTools File Requirements
+
+Before uploading your RVTools export, ensure your Excel file contains the required sheets and columns. The migration assessment tool parses specific data from your RVTools export.
+
+#### Required Sheet
+
+| Sheet | Description |
+|-------|-------------|
+| **vInfo** | Virtual machine information *(mandatory - parsing will fail without this sheet)* |
+
+#### Required Columns in vInfo Sheet
+
+| Column | Description |
+|--------|-------------|
+| `VM` | Virtual machine name *(required - used as primary identifier)* |
+| `VM ID` | VM object identifier |
+| `Host` | ESXi host IP/name running the VM |
+| `CPUs` | Number of virtual CPUs |
+| `Memory` | Memory size in MB |
+| `Powerstate` | VM power state (poweredOn/poweredOff) |
+
+#### Recommended Optional Sheets
+
+For a complete migration assessment, include these additional sheets:
+
+| Sheet | Purpose | Key Columns |
+|-------|---------|-------------|
+| **vHost** | Host & cluster organization | `Host`, `Datacenter`, `Cluster`, `Object ID`, `# Cores`, `# CPU`, `# Memory`, `Vendor`, `Model` |
+| **vDisk** | Disk configuration | `VM`, `Capacity MiB`, `Path`, `Disk Mode`, `Controller`, `Raw` |
+| **vNetwork** | Network adapters | `VM`, `Network`, `MAC Address` |
+| **vDatastore** | Storage information | `Name`, `Type`, `Object ID`, `Capacity MiB`, `Free MiB` |
+| **vCPU** | CPU hot-add settings | `VM`, `Hot Add`, `Hot Remove`, `Cores p/s` |
+| **vMemory** | Memory hot-add settings | `VM`, `Hot Add`, `Ballooned` |
+| **vCluster** | Cluster identifiers | `Name`, `Object ID` |
+| **dvPort** | Distributed port groups | `Port`, `Switch`, `VLAN`, `Object ID` |
+| **dvSwitch** | Distributed switches | `Switch` or `Name` |
+
+Export your RVTools data with **all sheets enabled** to ensure the most comprehensive migration assessment. 
+
 ### Go to [console.redhat.com](https://console.redhat.com)
 
 ### 1\. Introduction
